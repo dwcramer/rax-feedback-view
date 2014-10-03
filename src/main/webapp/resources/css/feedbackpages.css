@@ -1,0 +1,105 @@
+.pagestablerow{
+	cursor:pointer;
+	color:#15c;
+}
+th, .table > tbody > tr > td{
+	max-width: 600px;
+	word-break: break-all;
+}
+.counterclass{
+    color:#AAA;	
+}
+.negcountclass{
+	color:#910
+}
+
+#spinner{
+    display: block;
+    height:80px;
+    width:80px;
+    position:fixed;
+    top:35%;
+    left:50%;
+    -webkit-animation: rotation	.5s infinite linear;
+    -moz-animation: rotation	.5s infinite linear;
+    -o-animation: rotation		.5s infinite linear;
+    animation: rotation			.5s infinite linear;
+    border-left:	3px solid rgba(30,130,215,.15);
+    border-right:	3px solid rgba(30,130,215,.15);
+    border-bottom:	3px solid rgba(30,130,215,.15);
+    border-top:		3px solid rgba(30,130,215,.8);
+    border-radius:100%;
+    float:right;
+}
+
+.thelabelandspinner{
+	
+}
+
+.support-results-more {
+    margin: 40px 0;
+    font-weight: 400;
+    font-style: italic;
+    color: #999;
+}
+
+.support-results-more a i {
+    margin-right: 5px;
+}
+
+#showmoreandspinner{
+	float:right;
+}
+
+#loadmoreresults1,#loadmoreresults2{
+	margin:0px,0;
+	padding-right: 75px;
+}
+
+#loadsid1{
+	float:right;
+	padding-bottom:8px;
+}
+
+#loadsid2{
+	float:right;
+	position:relative;
+	bottom:25px;	
+}
+
+#countlabelandloadmoreresults1{
+	padding-bottom:8px;
+	position: relative;
+    top: 27px;
+}
+
+#countlabelandloadmoreresults2{
+	padding-bottom:8px;	
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(359deg);}
+}
+
+@-moz-keyframes rotation {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(359deg);}
+}
+
+@-o-keyframes rotation {
+    from {-o-transform: rotate(0deg);}
+    to {-o-transform: rotate(359deg);}
+}
+
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
+}
+
+#feedbacklogo{
+	position:relative;
+	top:35px;
+	padding-bottom:60px;
+	
+}

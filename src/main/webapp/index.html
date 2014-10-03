@@ -1,0 +1,89 @@
+<!DOCTYPE html >
+
+<html >
+<head>
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.css">
+   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+   <link rel="stylesheet" href="resources/css/feedbackpages.css">
+ 
+    <title>Feedbacks</title>
+
+</head>
+<body>
+<div ng-app="feedbackApp">
+    <div ng-controller="FeedbackController">
+        <div id="containerid" class="container thelabelandspinner">
+            <!--  
+            <header>        
+                <h1 class="lead">Rackspace Feedback Pages</h1>
+            </header>
+            -->
+            <img id="feedbacklogo" src="resources/images/doctoolsfeedbacklogo.png"/>
+            <div id="countlabelandloadmoreresults1">
+                {{tablecount}} out of <span id="pagecountid1">{{pagecount}}</span> Records            
+            </div>
+            <i id="spinner" style="display: none;"></i>
+            <div id="loadsid1">          
+                <span ng-show="shouldShowLoads()" id="loadmoreresults1" class="support-results-more loadmoreresults" ng-click="loadMoreResults()">
+                    <a href="#" id="showmoreid1"> 
+                        <i class="fa fa-refresh"></i> 
+                        Load more results
+                    </a>
+                </span> 
+                <span ng-show="shouldShowLoads()" id="loadallresults1" class="support-results-more loadmoreresults" ng-click="loadAllResults()">
+                    <a href="#" id="showallid1"> 
+                        <i class="fa fa-refresh"></i> 
+                        Load all results
+                    </a>                
+                </span>         
+            </div>              
+               
+            <table class="table table-striped" id="pagesid">
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Page ID</th>
+                    <th>URL</th>
+                    <th>Positive Count</th>
+                    <th>Negative Count</th>                
+                </tr>    
+ 
+                <tr id="row{{$index+1}}" ng-repeat="page in pages" class="pagestablerow" ng-model="pages" ng-click="launchFeedback(page.id)">
+                    <td class="counterclass">{{$index+1}}</td>
+                    <td class="pageidclass">{{page.id}}</td>
+                    <td>{{page.url}}</td>
+                    <td>{{page.count}}</td>
+                    <td class="negcountclass">{{page.negcount}}</td>
+                </tr>
+
+            </table>
+        
+            <div id="countlabelandloadmoreresults2">
+                {{tablecount}} out of <span id="pagecountid1">{{pagecount}}</span> Records  
+            </div>     
+            <div id="loadsid2">          
+                <span ng-show="shouldShowLoads()" id="loadmoreresults2" class="support-results-more loadmoreresults" ng-click="loadMoreResults()">
+                    <a href="#" id="showmoreid2"> 
+                        <i class="fa fa-refresh"></i> 
+                        Load more results
+                    </a>
+                </span> 
+                <span ng-show="shouldShowLoads()" id="loadallresults2" class="support-results-more loadmoreresults" ng-click="loadAllResults()">
+                    <a href="#" id="showallid2"> 
+                        <i class="fa fa-refresh"></i> 
+                        Load all results
+                    </a>                
+                </span>         
+            </div>         
+        
+        </div>
+    </div>
+</div>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>     
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+   <script type="text/javascript" src="resources/scripts/feedbackAng.js"></script>
+   
+</body>
+</html>
